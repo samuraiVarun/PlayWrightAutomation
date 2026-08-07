@@ -34,4 +34,12 @@ pipeline {
             }
         }
     }
+
+    post {
+        always {
+
+            archiveArtifacts artifacts: 'playwright-report/**', fingerprint: true
+
+        }
+    }
 }
