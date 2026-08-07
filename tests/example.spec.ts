@@ -31,7 +31,6 @@ test('This is for Uploads', async ({ page }) => {
 
 
   await page.locator('#fileinput').setInputFiles('tests/Book1.xlsx');
-   await page.waitForTimeout(10000);
 
   const [FileChooser] = await Promise.all([
     page.waitForEvent('filechooser'),
@@ -77,8 +76,7 @@ test('Handle iframe', async ({ page }) => {
 
   // Perform actions inside iframe
   await frame.getByRole('link', { name: 'All Access Plan' }).click();
-  await page.waitForTimeout(5000); // Wait for navigation or any necessary delay
-  //  await frame.locator("a[href='lifetime-access']").click();
+   //  await frame.locator("a[href='lifetime-access']").click();
 });
 
 //import { test, expect } from '@playwright/test';
