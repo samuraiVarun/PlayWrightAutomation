@@ -91,6 +91,7 @@ test('Switch Tab Example', async ({ page, context }) => {
     context.waitForEvent('page'),
     page.locator('#opentab').click()
   ]);
+  page.waitForTimeout(3000);
 
   // Wait until the new page loads
   await newPage.waitForLoadState();
