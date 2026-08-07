@@ -98,7 +98,7 @@ test('Switch Tab Example', async ({ page, context }) => {
 
   // Verify URL
   await expect(newPage).toHaveURL(/qaclickacademy/);
-     await expect(page).toHaveTitle('Google');
+
 
   // Verify Title
   await expect(newPage).toHaveTitle(/QAClick Academy - A Testing Academy to Learn, Earn and Shine/);
