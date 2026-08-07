@@ -91,13 +91,14 @@ test('Switch Tab Example', async ({ page, context }) => {
     context.waitForEvent('page'),
     page.locator('#opentab').click()
   ]);
-  page.waitForTimeout(3000);
+
 
   // Wait until the new page loads
   await newPage.waitForLoadState();
 
   // Verify URL
   await expect(newPage).toHaveURL(/qaclickacademy/);
+     await expect(page).toHaveTitle('Google');
 
   // Verify Title
   await expect(newPage).toHaveTitle(/QAClick Academy - A Testing Academy to Learn, Earn and Shine/);
